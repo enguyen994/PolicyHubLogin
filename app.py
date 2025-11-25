@@ -1,8 +1,8 @@
 from flask import Flask, render_template
-from routes.auth import auth_bp
+from auth import auth_bp
 import os
 from dotenv import load_dotenv
-from flask_wtf.csrf import CSRFProtect
+from csrf import CSRFProtect
 
 load_dotenv()
 app = Flask(__name__)

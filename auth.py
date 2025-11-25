@@ -1,7 +1,7 @@
 from flask import Blueprint, request, render_template, redirect, session
 from werkzeug.security import check_password_hash
-from models.user import create_user, get_user_by_username
-from config.ms_sso import get_microsoft_auth_url, exchange_code_for_token
+from user import create_user, get_user_by_username
+from ms_sso import get_microsoft_auth_url, exchange_code_for_token
 import bcrypt
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
